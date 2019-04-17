@@ -5,7 +5,7 @@ export interface IBrandItem {
   gender: string;
   rate: string;
   locationX: number;
-  locationY: number
+  locationY: number;
   selected: boolean;
 }
 

@@ -7,17 +7,20 @@ import { FilterTypes, IBrands } from './VillageTourApp.types';
 
 let index = 0;
 
-export class TourApp extends React.Component<{}, { brands: IBrands; filter: FilterTypes }> {
+export class TourApp extends React.Component<{}, 
+{ gender:string,brands: IBrands; filter: FilterTypes }> {
   constructor(props: any) {
     super(props);
-    this.state = {
+    this.state = 
+    {
+      gender: '',
       brands: {},
       filter: 'all'
     };
   }
 
   public render() {
-    const { filter, brands } = this.state;
+    const {filter, brands, gender } = this.state;
     return (
       <div>
         <TourHeader guestName={this.getGender} setFilter={this.setFilter} filter={filter} />
